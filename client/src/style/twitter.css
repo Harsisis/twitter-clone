@@ -5,7 +5,8 @@ header {
     text-align: center;
     background-color: rgb(51, 97, 121);
     color: white;
-    position: fixed;
+    position: sticky;
+    top: 0;
 }
 
 .logo{
@@ -18,7 +19,6 @@ header {
     width: 40%;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 95px;
   }
   .container > div {
     flex: 1; /*grow*/
@@ -67,9 +67,15 @@ header {
 
 .commentTable{
     padding-left: 20px;
+    border-top: 1px solid rgb(128, 128, 128);
     width: 100%;
 }
 
 .commentFontSize{
     font-size: 14px;
+}
+
+a{ 
+    color: black;
+    text-decoration: none;
 }

@@ -1,4 +1,5 @@
 import moment from "moment";
+import { Link } from 'react-router-dom';
 
 function tweetComment(props) {
     return (
@@ -9,8 +10,10 @@ function tweetComment(props) {
                         <tr>
                             <td>
                             <p className="commentFontSize">
-                                <img className="userIcon commentUserIcon" src={props.user.profilePicture} alt="Logo" />
-                                {props.user.username}
+                                <Link to={`user/${props.user.name}`}>
+                                    <img className="userIcon commentUserIcon" src={props.user.profilePicture} alt="Logo" />
+                                    {props.user.username}
+                                </Link>
                             </p>
                             </td>
                             <td className="date commentDate">{moment(props.createdAt, "YYYYMMDD").fromNow()}</td>

@@ -1,10 +1,11 @@
 import HomePage from './Component/homePage';
 import React, { useState, useEffect } from 'react'
+import { Outlet } from 'react-router-dom';
 
 function App() {
 
   const [tweets, fetchTweet] = useState([]);
-    const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(true);
 
     const getData = () => {
         fetch('http://localhost:6852/feed')
@@ -13,7 +14,6 @@ function App() {
             return res.json();
         })
         .then((data) => {
-            console.log(data)
             fetchTweet(data)
             setLoading(false)
         })
@@ -24,7 +24,11 @@ function App() {
     }, [])
 
   return (
-    <HomePage tweets={tweets} loading={loading}></HomePage>
+    <div>
+      <HomePage tweets={tweets} loading={loading}></HomePage>
+      <Outlet/>
+    </div>
+    
   );
 }
 

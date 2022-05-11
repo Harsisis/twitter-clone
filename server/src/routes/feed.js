@@ -1,16 +1,7 @@
 import { Router } from 'express';
+import { convertUserDbToUser } from '../utils';
 
 const route = Router();
-
-const convertUserDbToUser = ({
-  name,
-  username,
-  picture_url: profilePicture,
-}) => ({
-  name,
-  username,
-  profilePicture,
-});
 
 export default (app) => {
   app.use('/feed', route);

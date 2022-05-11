@@ -2,6 +2,8 @@ import moment from "moment"
 import PropTypes from 'prop-types';
 import TweetComment from "./tweetComment"
 
+import { Link } from 'react-router-dom';
+
 function tweet(props){
     return (
         <div className="tweet">
@@ -9,8 +11,10 @@ function tweet(props){
                 <tbody>
                     <tr>
                         <td>
-                            <img className="userIcon tweetUserIcon" src={props.user.profilePicture} alt="Logo" />
-                            {props.user.username}
+                            <Link to={`user/${props.user.name}`}>
+                                <img className="userIcon tweetUserIcon" src={props.user.profilePicture} alt="Logo" />
+                                {props.user.username}
+                            </Link>
                         </td>
                         <td></td>
                         <td className="date tweetDate">{moment(props.createdAt, "YYYYMMDD").fromNow()}</td>
@@ -33,7 +37,7 @@ tweet.propTypes = {
         username: PropTypes.string,
         name: PropTypes.string,
         profilePicture: PropTypes.string
-      }).required,
+      }),
     createdAt: PropTypes.string,
     body: PropTypes.string,
     comments: PropTypes.array

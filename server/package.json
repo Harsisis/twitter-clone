@@ -6,6 +6,7 @@
   "author": "Maxence Hammen <maxence.hammen@zeiltstudio.com>",
   "scripts": {
     "db:init": "babel-node -r dotenv/config src/db/dbInit.js",
+    "db:seed": "babel-node -r dotenv/config src/db/dbSeed.js",
     "start": "nodemon",
     "lint": "npm run lint:js",
     "lint:eslint": "eslint --ignore-path .gitignore --ext .js",
@@ -25,12 +26,15 @@
     "bcrypt": "^5.0.1",
     "better-sqlite3": "^7.5.1",
     "body-parser": "^1.20.0",
+    "bootstrap": "^5.1.3",
     "celebrate": "^15.0.1",
+    "cors": "^2.8.5",
     "debug": "^4.3.4",
     "dotenv": "^16.0.0",
     "express": "^4.18.1",
     "express-jwt": "^7.7.0",
-    "jsonwebtoken": "^8.5.1"
+    "jsonwebtoken": "^8.5.1",
+    "react-bootstrap": "^2.3.1"
   },
   "devDependencies": {
     "babel-loader": "^8.2.5",

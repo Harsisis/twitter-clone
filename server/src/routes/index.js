@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import activity from './activity';
+import activity from './feed';
 import auth from './auth';
 import user from './user';
 import tweets from './tweets';

@@ -18,7 +18,7 @@ id INTEGER PRIMARY KEY AUTOINCREMENT,
 body TEXT NOT NULL,
 tweet_id INTEGER NOT NULL,
 user_id TEXT NOT NULL,
-create_at DATETIME NOT NULL,
+created_at DATETIME NOT NULL,
 FOREIGN KEY(tweet_id) REFERENCES tweets(id),
 FOREIGN KEY(user_id) REFERENCES users(name)
 );

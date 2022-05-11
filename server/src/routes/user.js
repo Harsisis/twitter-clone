@@ -42,7 +42,7 @@ export default (app) => {
       );
       const commentsDb = stmtComments.all();
 
-      const tweets = tweetsDb.map(({ id, body, createdAt }) => ({
+      const tweets = tweetsDb.map(({ id, body, created_at: createdAt }) => ({
         id,
         body,
         user: convertUserDbToUser(userDb),

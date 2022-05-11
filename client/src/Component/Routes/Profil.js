@@ -21,7 +21,7 @@ function Profil() {
     useEffect(() => {
         getData(userProfil)
     }, [userProfil])
-    console.log(userProfil)
+    
     return(
         <div>
             <ProfilCard name={userProfil.name} 

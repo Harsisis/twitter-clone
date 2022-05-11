@@ -27,3 +27,61 @@
     width: 100%;
     border-radius: 50%;
 }
+
+.tweet{
+    background-color: rgb(215, 215, 215);
+    border-radius:5px;
+    border: 3px solid rgb(171, 171, 171);
+    color: black;
+    margin-top: 15px;
+}
+
+.tweet > table {
+    width: 100%;
+    text-align: left;
+}
+
+.tweet > table > td { 
+    padding : 3px;
+}
+
+.userIcon {
+    border-radius: 50%;
+    margin-right: 10px
+}
+
+.date{
+    text-align: right;
+}
+
+.tweetDate {
+    font-size: small;
+}
+.tweetUserIcon {
+    width: 30px;
+}
+.commentDate {
+    font-size: 10px;
+}
+.commentUserIcon {
+    width: 20px;
+}
+
+.commentTable{
+    padding-left: 20px;
+    border-top: 1px solid rgb(128, 128, 128);
+    width: 100%;
+}
+
+.commentFontSize{
+    font-size: 14px;
+}
+
+a{ 
+    color: black;
+    text-decoration: none;
+}
+
+.profilName{
+    font-size: 50px;
+}

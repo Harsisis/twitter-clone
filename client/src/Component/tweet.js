@@ -11,13 +11,14 @@ function tweet(props){
                 <tbody>
                     <tr>
                         <td>
-                            <Link to={`user/${props.user.name}`}>
+                            <Link to={`/user/${props.user.name}`}>
                                 <img className="userIcon tweetUserIcon" src={props.user.profilePicture} alt="Logo" />
                                 {props.user.username}
                             </Link>
                         </td>
                         <td></td>
-                        <td className="date tweetDate">{moment(props.createdAt, "YYYYMMDD").fromNow()}</td>
+                        {props.createdAt ? <td className="date tweetDate">{moment(props.createdAt, "YYYYMMDD").fromNow()}</td> : ""}
+                        
                     </tr>
                     <tr>
                         <td colSpan="3">{props.body}</td>

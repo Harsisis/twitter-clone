@@ -15,13 +15,12 @@ function Profil() {
         })
         .then((data) => {
             fetchUserProfil(data)
-            console.log(data)
         })
     }
 
     useEffect(() => {
-        getData()
-    }, [])
+        getData(userProfil)
+    }, [userProfil])
     console.log(userProfil)
     return(
         <div>

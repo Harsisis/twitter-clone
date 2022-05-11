@@ -10,7 +10,7 @@ function tweetComment(props) {
                         <tr>
                             <td>
                             <p className="commentFontSize">
-                                <Link to={`user/${props.user.name}`}>
+                                <Link to={`/user/${props.user.name}`}>
                                     <img className="userIcon commentUserIcon" src={props.user.profilePicture} alt="Logo" />
                                     {props.user.username}
                                 </Link>

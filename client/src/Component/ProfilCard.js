@@ -18,9 +18,14 @@ function ProfilCard(props) {
                 </div>
             </div>
 
-            {props.tweets?.map((item) => (
+            <div className="container">
+                <div>
+                    {props.tweets?.map((item) => (
                         <Tweet key={item.id} body={item.body} createdAt={item.createdAt} user={item.user} comments={item.comments}></Tweet>
                     ))}
+                </div>
+            </div>
+            
         </div>
     );
 }

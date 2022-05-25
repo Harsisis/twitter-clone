@@ -11,7 +11,7 @@ function CreateTweet() {
 
   const handleSubmit = (evt) => {
     evt.preventDefault();
-    if (sessionStorage.getItem('token') == null) {
+    if (cookie == null) {
       alert(`Your session has expired`);
       navigate('/login');
     } else {
@@ -35,6 +35,7 @@ function CreateTweet() {
         .then((result) => console.log(result))
         .catch((error) => console.log('error', error));
     }
+    window.location.reload(false);
   };
 
   return (

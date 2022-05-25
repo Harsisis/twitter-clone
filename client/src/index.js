@@ -6,8 +6,9 @@ import {
   Route
 } from 'react-router-dom';
 import App from './App';
-import Header from './Component/header'
+import Header from './Component/Header'
 import Profil from './Component/Routes/Profil'
+import Login from './Component/Routes/Login'
 
 import "./Style/app.css"
 
@@ -18,6 +19,7 @@ root.render(
   <Routes>
     <Route path="/" element={<App/>}/>
     <Route path="user/:name" element={<Profil/>}/>
+    <Route path="/login" element={<Login/>}/>
   </Routes>
   </BrowserRouter>
 );

@@ -17,7 +17,7 @@ function tweet(props){
                             </Link>
                         </td>
                         <td></td>
-                        <td className="date tweetDate">{moment(props.createdAt, "YYYYMMDD").fromNow()}</td>
+                        <td className="date tweetDate">{moment(props.createdAt).fromNow()}</td>
                         
                     </tr>
                     <tr>

@@ -12,7 +12,7 @@
   }
 
 .profile{
-    background-color: rgb(215, 215, 215);
+    background-color: rgb(136, 136, 136);
     border-radius:5px;
     border: 3px solid rgb(171, 171, 171);
     color: black;
@@ -29,10 +29,10 @@
 }
 
 .tweet{
-    background-color: rgb(215, 215, 215);
+    background-color: #2f3b4b;
     border-radius:5px;
     border: 3px solid rgb(171, 171, 171);
-    color: black;
+    color: white;
     margin-top: 15px;
 }
 
@@ -78,7 +78,7 @@
 }
 
 a{ 
-    color: black;
+    color: white;
     text-decoration: none;
 }
 

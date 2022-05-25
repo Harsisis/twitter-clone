@@ -12,6 +12,7 @@ function Login() {
 
   const handleSubmit = (evt) => {
     evt.preventDefault();
+    setLoading(true);
     var myHeaders = new Headers();
     myHeaders.append('Content-Type', 'application/json');
 
@@ -28,10 +29,7 @@ function Login() {
     };
 
     fetch('http://localhost:6852/signin/', requestOptions)
-      .then((response) => {
-        setLoading(true);
-          return response.json();
-    })
+      .then((response) => response.json())
       .then((result) => handleResult(result))
       .catch((error) => console.log('error', error));
   };
@@ -70,8 +68,7 @@ function Login() {
           />
         </div>
         <div className="div5">
-            {loading}
-          <input className="submit-button" type="submit" value="Log in" />
+        {loading ? <input id="submitButton" className="submit-button" type="submit" value="Log in" /> : ''}
         </div>
       </form>
     </div>

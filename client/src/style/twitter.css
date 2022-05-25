@@ -147,13 +147,14 @@ header > div:last-child(){
 }
 
 .submit-button{
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.35), 0 6px 20px 0 rgba(0, 0, 0, 0.35);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.35), 0 3px 10px 0 rgba(0, 0, 0, 0.35);
     border-radius:5px;
     padding: 10px 30px;
     background-color: #4382a1;
     color:white;
     border: none;
 }
+
 .submit-button:hover{
     background-color: #a9daf1;
     color: black;

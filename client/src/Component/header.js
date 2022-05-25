@@ -1,7 +1,8 @@
 import { useNavigate, Link } from 'react-router-dom';
-import useAuth from './utils/AuthorizationHook';
 
 import mainLogo from '../logo.png';
+
+import useAuth from './utils/AuthorizationHook';
 
 function Header() {
   const navigate = useNavigate();

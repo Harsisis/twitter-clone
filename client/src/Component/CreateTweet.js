@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+
 import useAuth from './utils/AuthorizationHook';
 
 function CreateTweet() {
   const [body, setBody] = useState('');
 
   const navigate = useNavigate();
-  
+
   const [cookie] = useAuth();
 
   const handleSubmit = (evt) => {

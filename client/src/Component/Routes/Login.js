@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+
 import useAuth from '../utils/AuthorizationHook';
 
 function Login() {
@@ -68,9 +69,21 @@ function Login() {
           />
         </div>
         <div className="div5">
-        {!loading ? <input id="submitButton" className="submit-button" type="submit" value="Log in" /> : 
-            <div className="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
-        }
+          {!loading ? (
+            <input
+              id="submitButton"
+              className="submit-button"
+              type="submit"
+              value="Log in"
+            />
+          ) : (
+            <div className="lds-ellipsis">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          )}
         </div>
       </form>
     </div>
